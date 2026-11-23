@@ -20,14 +20,16 @@ The reason it exists: each of these models fails differently. Krea loses letteri
 ## Install
 
 ```bash
-git clone https://github.com/Trifocals7733/Image-Prompt-Forge-ComfyUI.git
-cp -r Image-Prompt-Forge-ComfyUI/.agents/skills/image-prompt-forge-comfyui ~/.agents/skills/
+npx skills add Trifocals7733/Image-Prompt-Forge-ComfyUI
 ```
 
-Project scope works the same way, for a skill that only applies to one repo:
+The [skills.sh](https://www.skills.sh/Trifocals7733/Image-Prompt-Forge-ComfyUI) CLI asks which agent to install for, and whether to install globally or only in the current project.
+
+If you would rather keep the files where you can see them, clone and copy:
 
 ```bash
-cp -r Image-Prompt-Forge-ComfyUI/.agents/skills/image-prompt-forge-comfyui your-project/.agents/skills/
+git clone https://github.com/Trifocals7733/Image-Prompt-Forge-ComfyUI.git
+cp -r Image-Prompt-Forge-ComfyUI/.agents/skills/image-prompt-forge-comfyui ~/.agents/skills/
 ```
 
 pi discovers both `~/.agents/skills/` and a project's `.agents/skills/`. Any other harness that reads a `SKILL.md` will load it too. The MOSS layout compiler needs Python 3; nothing else does.
