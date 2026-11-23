@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# local-only material, not published
+.agents/archive/
+.codegraph/
